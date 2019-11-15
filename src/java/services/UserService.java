@@ -13,6 +13,12 @@ public class UserService {
         User user = db.getUser(email);
         return user;
     }
+    
+    public User getByEmail(String email) throws Exception {
+        UserDB db = new UserDB();
+        User user = db.getUserByEmail(email);
+        return user;
+    }
 
     public List<User> getAll() throws Exception {
         UserDB db = new UserDB();
